@@ -1,0 +1,40 @@
+.section-p1{
+    padding: 40px 80px;
+}
+
+#feature{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#feature .feBox{
+    width: 250px;
+    text-align: center;
+    padding: 25px  15px;
+    border: 3px solid transparent;
+    border-radius: 5px;
+    margin: 15px 0;
+    
+    transition: 0.3s ease;
+}
+
+#feature .feBox:hover{
+    box-shadow: 10px 10px 54px rgba(0,0,0,0.3);
+    border-color: black;
+}
+
+.feBox h6{
+    font-size: 13px;
+    background-color: cornsilk;
+    border-radius: 8px;
+    display: inline-block;
+    padding: 10px 15px;
+}
+
+#feature .feBox img{
+    width:100%;
+    margin-bottom: 10px;
+    border-radius: 50%;
+}
