@@ -1,0 +1,135 @@
+.container{
+    max-width: 1280px;
+    margin: 0 auto;
+    
+    display: flex;
+    align-items: center;
+    justify-content:space-evenly;
+}
+
+nav{
+    display: inline-block;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    background-color: 6f747c;
+    border-bottom: 3px solid #07295b;
+    background-color: black;
+}
+
+.logo {
+    height: 150px;
+}
+
+.container h1{
+    color: white;
+    font-size: 50px;
+    font-weight: 900;
+    text-shadow: 4px 4px #ff0000;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+.menubar{
+    display: block;
+    position: relative;
+    z-index: 1;
+    
+    user-select: none;
+    
+    border: none;
+    background: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.menubar span{
+    display: block;
+    width: 30px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    background-color: white;
+    border-radius: 6px;
+    z-index: 1;
+    transform-origin: 0 0;
+    transition: 0.4s;
+}
+
+.menubar:hover span:nth-child(2){
+    transform: translateX(10px);
+    background-color: #07295b;
+}
+
+.menubar.is-active span:nth-child(1){
+    transform: translate(1px, -2px) rotate(45deg);
+}
+
+.menubar.is-active span:nth-child(3){
+    transform: translate(-2px, 1px) rotate(-45deg);
+}
+.menubar.is-active span:nth-child(2){
+    opacity: 0;
+    transform: translateX(15px);
+}
+
+.menubar.is-active:hover span{
+background: linear-gradient(83deg, rgba(16,201,180,1) 10%, rgba(173,69,115,1) 89%, rgba(255,0,155,1) 97%);
+}
+
+.menu{
+    display: none;
+    flex: 1 1 0px;
+    justify-content: flex-end;
+    margin: 0px;
+    padding:0px 200px;
+}
+
+.menu a{
+    color: white;
+    margin: 0 25px;
+    font-weight: 600px;
+    font-size: 18px;
+    text-decoration: none;
+    transition: 0.4s;
+    padding: 8px 16px;
+   
+}
+
+.menu a.is-active, .menu a:hover {
+    background-color: rgb(16,201,180);
+}
+
+@media (min-width: 768px){
+    .menubar {
+        display: none;
+    }
+    .menu{
+        display: flex;
+    }
+}
+
+@media (max-width: 768px){
+    .cim{
+        display: none;
+    }
+}
+
+.socialIcon{
+    height: 50px;
+    
+    margin: 0 10px;
+    padding: 0 10px;
+    font-size: 30px;
+    color: white;
+    transition: color 0.3s;
+    transition: background-color 0.8s;
+    transition: transformX();
+    border-radius: 100px;
+}
+
+.socialIcon:hover{
+    color: #07295b;
+    background-color: white;
+}
